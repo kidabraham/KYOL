@@ -1,0 +1,562 @@
+@charset "UTF-8";
+/*------index-------*/
+/* se eliminan todos los padding y los margin que vienen por defecto y se resetean a 0 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/imghome.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 220px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  border: 1px solid rgb(0, 160, 200);
+  background-color: transparent;
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  transition: 1s;
+}
+.nav-links ul li:hover {
+  background-color: rgb(92, 22, 145);
+}
+.nav-links ul li:hover a {
+  color: white;
+}
+.nav-links ul li a {
+  color: rgb(4, 43, 70);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.text-box {
+  width: 90%;
+  color: rgb(4, 43, 70);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: rgb(4, 43, 70);
+}
+
+.banner-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(4, 43, 70);
+  border: 1px solid rgb(0, 160, 200);
+  padding: 12px 34px;
+  font-size: 15px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.banner-btn:hover {
+  background: rgb(92, 22, 145);
+  transition: 1s;
+  color: white;
+}
+
+nav .bi {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    height: 320px;
+    width: 200px;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+  }
+  .nav-links ul {
+    padding: 40px;
+  }
+}
+/*------ filosofía -------*/
+.filosofia {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.fila {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-filosofia {
+  flex-basis: 31%;
+  background: rgba(235, 235, 235, 0.932);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.col-filosofia:hover {
+  box-shadow: 0 0 20px 0px rgba(5, 12, 40, 0.941);
+}
+
+@media (max-width: 700px) {
+  .fila {
+    flex-direction: column;
+  }
+}
+/*------instalaciones-------*/
+.instalaciones {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.ins-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.ins-col img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(0, 160, 200, 0.826);
+}
+
+.layer ul {
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: 0, 5s;
+}
+
+.layer:hover ul {
+  bottom: 20%;
+  opacity: 1;
+}
+
+/*------servicios-------*/
+.servicios {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.servicios-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.servicios-col i {
+  font-size: 100px;
+  display: grid;
+  place-content: center;
+  color: rgb(92, 22, 145);
+}
+.servicios-col p {
+  padding: 0;
+}
+.servicios-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/*------reseñas-------*/
+.opiniones {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.opiniones-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: rgba(235, 235, 235, 0.932);
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+.opiniones-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.opiniones-col p {
+  padding: 0;
+}
+.opiniones-col h3 {
+  margin-top: 15px;
+  text-align: left;
+}
+.opiniones-col .bi {
+  color: rgb(255, 166, 0);
+}
+
+/*------banner-------*/
+.banner {
+  margin: 100px auto;
+  width: 80%;
+  background-image: url(../img/banner2.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.banner a {
+  color: white;
+}
+.banner h1 {
+  color: white;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .banner h1 {
+    font-size: 20px;
+  }
+}
+/*------footer-------*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.iconos .bi {
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+
+.bi-activity {
+  color: red;
+}
+
+/*------seccion conocenos-------*/
+.sub-header {
+  height: 60vh;
+  width: 100%;
+  background-image: url(../img/banner1.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: rgb(4, 43, 70);
+}
+.sub-header h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.conocenos {
+  width: 80%;
+  margin: auto;
+}
+
+.conocenos-col {
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.conocenos-col img {
+  width: 100%;
+}
+.conocenos-col h1 {
+  padding-top: 0;
+}
+.conocenos-col p {
+  padding: 15px 0 25px;
+}
+
+.btn-rojo {
+  color: rgb(0, 160, 200);
+}
+
+.btn-rojo:hover {
+  color: white;
+}
+
+.conocenos2 {
+  width: 80%;
+  margin: auto;
+}
+
+.conocenos-col2 {
+  flex-basis: 48%;
+  padding: 0px 2px;
+}
+.conocenos-col2 img {
+  width: 100%;
+}
+.conocenos-col2 h1 {
+  padding-top: 0;
+}
+.conocenos-col2 p {
+  padding: 15px 0 25px;
+}
+
+.btn-rojo {
+  color: rgb(0, 160, 200);
+}
+
+.btn-rojo:hover {
+  color: white;
+}
+
+/*------seccion servicios-------*/
+.sub-header2 {
+  height: 60vh;
+  width: 100%;
+  background-image: url(../img/banner3.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: rgb(4, 43, 70);
+}
+.sub-header2 h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+/*------seccion personal-------*/
+.sub-header3 {
+  height: 60vh;
+  width: 100%;
+  background-image: url(../img/banner4.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: rgb(4, 43, 70);
+}
+.sub-header3 h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.contenido-niveles {
+  width: 80%;
+  margin: auto;
+  padding: 1s0px;
+}
+
+.niveles-izq {
+  flex-basis: 65%;
+}
+.niveles-izq img {
+  width: 100%;
+}
+.niveles-izq h2 {
+  color: black;
+  font-weight: 600;
+  margin: 0px 0px 0px;
+}
+.niveles-izq p {
+  color: #999;
+  padding: 10px 0px;
+}
+
+.niveles-der {
+  flex-basis: 32%;
+}
+.niveles-der h3 {
+  background: rgb(0, 160, 200);
+  color: white;
+  padding: 7px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.niveles-der div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.caja-comen {
+  border: 1px solid #ccc;
+  margin: 50px 0;
+  padding: 10px 20px;
+}
+.caja-comen h3 {
+  text-align: left;
+}
+
+.form-comen input {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+}
+.form-comen textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+}
+.form-comen button {
+  margin: 10px 0;
+}
+
+/*------seccion contacto-------*/
+.sub-header4 {
+  height: 50vh;
+  width: 100%;
+  background-image: url(../img/banner5.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: rgb(4, 43, 70);
+}
+.sub-header4 h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.mapa {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+.mapa iframe {
+  width: 100%;
+}
+
+.contactanos {
+  width: 80%;
+  margin: auto;
+}
+
+.contacto-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+.contacto-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contacto-col .bi {
+  font-size: 28px;
+  color: rgb(0, 160, 200);
+  margin: 10px;
+  margin-right: 30px;
+}
+.contacto-col p {
+  padding: 0;
+}
+.contacto-col h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: rgb(0, 160, 200);
+  font-weight: 400;
+}
+.contacto-col input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.contacto-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=estilov2.css.map */
