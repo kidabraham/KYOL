@@ -1,0 +1,23 @@
+{
+  "name": "nuevo_repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "sass --watch scss/estilo.scss css/estilov2.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kidabraham/segunda_entrega_agc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kidabraham/segunda_entrega_agc/issues"
+  },
+  "homepage": "https://github.com/kidabraham/segunda_entrega_agc#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
